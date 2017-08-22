@@ -1,3 +1,4 @@
 const weather = require('./weather.js');
 const bracklesham = 3764;
-weather.get(bracklesham);
+const locationInput = process.argv.splice(2);
+weather.get(locationInput);

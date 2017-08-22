@@ -67,17 +67,17 @@ function get(spotID) {
 						const weatherDataArray = JSON.parse(body);
 						weatherDataArray.forEach((weatherData) => { printWeather(weatherData)});
 					} catch (error) {
-						printError(error, 49);
+						printError(error, 70);
 					}
 				});
 			} else {
-				const message = `There was an error getting the profile for spot ID ${spotID} (${http.STATUS_CODES[response.statusCode]})`;
+				const message = `There was an error getting with the location - ${spotID} (${http.STATUS_CODES[response.statusCode]})`;
 				const statusCodeError = new Error(message);
-				printError(statusCodeError, 55);
+				printError(statusCodeError, 76);
 			}
 		});
 	} catch (error) {
-		printError(error, 59);
+		printError(error, 80);
 	}
 }
 
